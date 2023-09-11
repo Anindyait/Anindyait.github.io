@@ -1,0 +1,243 @@
+<html style="scroll-snap-type: y mandatory;">
+<head>
+    <link rel="icon" href="/assets/images/fav.png">
+    <title>Anindya Biswas</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">   
+     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			crossorigin="anonymous">
+	</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/style.css">
+	
+	<script src="https://kit.fontawesome.com/13deb536c6.js" crossorigin="anonymous"></script>
+
+
+    
+    <script>
+        window.addEventListener("scroll", scroll);
+        function scroll() {
+            var icon = document.getElementById("icon");
+            var pageBottom = window.scrollY + window.screen.height;
+            var tags = $(".appear");
+            var elements = document.getElementsByClassName("appear");
+            console.log(window.scrollY);
+            if(window.scrollY < 100)
+            {
+              icon.classList.remove("small");
+
+              icon.classList.add("big");
+              
+            }
+            else
+            {
+              icon.classList.remove("big");
+              icon.classList.add("small");
+
+            }
+
+            for (var i = 0; i < tags.length; i++) {
+
+              var tag = tags[i];
+
+			  if (elements[i].offsetTop < pageBottom-200) 
+              {
+                $(tag).addClass("visible");
+              } 
+              else
+              {
+                $(tag).removeClass("visible");
+
+              }
+            }
+          }
+
+                  //Tips
+        var allGreet = ["Hello!", "Hi!", "Hola!", "Howdy!", "Wassap!", "Hey!"];
+            
+        document.addEventListener("DOMContentLoaded", function(){
+            
+            setInterval(newGreet, 10000);
+
+            });
+
+
+            async function newGreet(){
+            var greet_element = document.getElementById("greet");
+            var currentGreet = allGreet[Math.floor(Math.random()*allGreet.length)];
+            greet_element.classList.add('fade-out');
+            await sleep(500);
+            greet_element.innerHTML = currentGreet;
+            greet_element.classList.remove('fade-out');
+            greet_element.classList.add('fade-in');
+            }
+
+            const sleep = async (milliseconds) => {
+                await new Promise(resolve => {
+                    return setTimeout(resolve, milliseconds)
+                });
+            };
+        </script>
+
+    
+</head>
+    <body>
+        <div class="font">
+
+          <nav class="navbar fixed-top" id="header">
+            <div class="container-fluid">
+              <a class="navbar-brand big" href="/" id="icon">    
+                <img src="/assets/images/logo.png" alt="Logo" width="65" class="logo">
+            </a>
+              <button class="navbar-toggler float-left" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+    
+                  <h2 class="offcanvas-title" id="offcanvasNavbarLabel">Anindya Biswas</h2>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav text-center">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#project">My Projects</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://www.linkedin.com/in/anindya-biswas-334795220" target="_blank">LinkedIn</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://github.com/Anindyait" target="_blank">GitHub</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://www.instagram.com/anindyakbiswas5/" target="_blank">Instagram</a>
+                    </li>
+                  </ul>
+                
+                </div>
+              </div>
+            </div>
+          </nav>
+
+                <div class="block block-1">
+       
+                <div class="greeting-container" id="home">
+                    <div class="header-spacing"></div>
+                    <div class=" d-flex align-items-center justify-content-center">
+                      <h1 class="greeting text-center fade-in" id="greet">Hi!</h1>
+                      <p>This is <span class="name">Anindya Biswas</span> . Welcome to my website!</p>
+                    </div>
+                    <div class="button-container">
+                      <button class="custom-btn" id="aboutMe">About Me</button>
+                      <button class="custom-btn" id="myProjects">My Projects</button>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="block block-2">
+                    <div class="aboutme-container" id="about">
+                      <div class="header-spacing"></div>
+
+                      <div class="row w-100">
+                        <div class="col-lg">
+                          <h1 class="appear">About Me</h1>
+                          <p class="appear">Hi! I'm Anindya Biswas 22M... doing B.Tech at University of Calcutta in Information Technology. Sometimes I study for it. I like cars, PCs and things with good UI/UX. <br><br>Some say I am short, and somehow responsible for the Russian revolution. All I know is I need a job. 
+                            <br><br>The pursuit of currency and the proclivity of contemporary society to publicly exhibit their limited knowledge, ability and skills have forced me to conceive this website.
+                            <br><br>Mail me for further info.
+                          </p>
+                        </div>
+                        <div class="col-lg">
+                          <ul>
+                            <li class="appear">Anindya Biswas</li>
+                            <a href="mailto:anindyakbiswas5@gmail.com"><li class="appear mail">anindyakbiswas5@gmail.com</li></a>
+                            <li class="appear"><b>DOB:</b> 7th Feb. 2001</li>
+                            <li class="appear"><b>Course:</b> B.Tech 20-24</li>
+                            <li class="appear"><b>Year:</b> 4th</li>
+                            <li class="appear"><b>Department:</b> Information Technology(AKCSIT)</li>
+                            <li class="appear"><b>College:</b> University of Calcutta </li>
+                            <li class="appear"><b>Campus:</b> Technology Campus, Sector III, Salt Lake</li>
+                            <li class="appear"><b>Areas of Interest:</b> AI, ML, Data Science, Web Designing.</li>
+                            <li class="appear"><b>Hobbies:</b> Technology, Motorsports </li>
+                            <br>
+                            <br>
+                            <a href="https://www.linkedin.com/in/anindya-biswas-334795220" target="_blank"><li class="social appear"><i class="fa-brands fa-linkedin"></i></li></a>
+                            <a href="https://www.instagram.com/anindyakbiswas5/" target="_blank"><li class="social appear"><i class="fa-brands fa-instagram"></i></li></a>
+                            <a href="https://github.com/Anindyait" target="_blank"><li class="social appear"><i class="fa-brands fa-github"></i></li></a>
+                          </ul>
+                        </div>
+                      </div>
+                    
+
+                    </div>
+                </div>
+                
+                <div class="block block-3">
+                  <div class="project-container" id="project">
+                    <div class="header-spacing"></div>
+                    <h1>My Projects</h1>
+                    <ul>
+                      <a href="https://github.com/priyanka-maz/sign-language-detection" target="_blank"><li class="appear">
+                        <h2>American Sign Language Detection</h2>
+                        <p>EchoSign was made as part of an IBM internship project. It uses transfer learning on MobileNet on a hand-curated dataset of ASL images. The website for this classification was developed in Flask and it uses TTS technology for ASL text to speech conversion.</p>
+                      </li></a>
+                      <a href="https://github.com/priyanka-maz/music-recommendation-facial-emotion" target="_blank"><li class="appear">
+                        <h2>Music Recommendation by Facial Emotion Detection</h2>
+                        <p>Inside-Out is a web application that uses FER library, OpenCv's Haarcascades to detect faces and their emotion. Music is recommended using Spotify API. The website uses Python, Flask, SocketIO, HTML, CSS & JS.</p>
+                      </li></a>
+                      <a href="https://github.com/priyanka-maz/raspi-camera-doorbell" target="_blank"><li class="appear">
+                        <h2>Smart Doorbell using RaspberryPi</h2>
+                        <p>Raspi-Cam is a door camera with face detection and recognition capabilities. It also has the ability to stream, record and capture still images from the live feed of the camera. The project is made on Raspberry Pi. It uses OpenCV and face_recognition in a Flask Server supported by HTML, JS, CSS as frontend.</p>
+                      </li></a>
+                      <a href="https://github.com/Anindyait/Tech-Tonic" target="_blank"><li class="appear">
+                        <h2>Technology News Website</h2>
+                        <p>Tech-Tonic is tech news website using JSP, Servlet and MySQL for backend and HTML, CSS and JS for frontend. Features include ability to add, edit or delete articles, cookies based website-wide dark theme, tag based article sorting and article progress bar.</p>
+                      </li></a>
+                      <a href="https://github.com/Anindyait/Meme-website" target="_blank"><li class="appear">
+                        <h2>Meme sharing website</h2>
+                        <p>SUS, a meme sharing website that implements MVC(Model-View-Container) framework using ASP.NET. It uses MySQL as database. Implements cookie based login and ability to like posts.</p>
+                      </li></a>
+                      <a href="https://github.com/Anindyait/Memory-Game" target="_blank"><li class="appear">
+                        <h2>Card based Memory Game</h2>
+                        <p>Flipper is a simple card based memory game made using Unity and C# scripting. The game has 2 modes - 4x4 and 6x6. The game can be played online at <u>anindya5.itch.io/flipper</u></p>
+                      </li></a>
+                      <a href="https://github.com/Anindyait/Panda-web-project" target="_blank"><li class="appear">
+                        <h2>Online Shopping website</h2>
+                        <p>The Panda Shop is an online shopping website made using Java Servlet, JDBC, MySQL, JSP and Apache Tomcat. It implements features like shopping cart, cookie based login and admin dashboard.</p>
+                      </li></a>
+                    </ul>
+                  </div>
+
+                </div>
+        </div>
+        <div class="block block-4">
+          <h1>:-)</h1>
+        </div>
+    </body>
+    <script>
+      var blocks = document.getElementsByClassName("block");
+      document.getElementById("aboutMe").addEventListener("click", function(e) {
+          var b = $(".block");
+          blocks[1].scrollIntoView();
+      });
+      document.getElementById("myProjects").addEventListener("click", function(e) {
+        var b = $(".block");
+        blocks[2].scrollIntoView();
+    });
+      
+    </script>
+</html>
