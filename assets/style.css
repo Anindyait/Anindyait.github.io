@@ -480,6 +480,13 @@
     opacity: 95%;
 }
 
+.paper-title sup{
+    font-size: 18px;
+    background-color: #9fffb9;
+    padding: 1px 8px;
+    border-radius: 30px;
+}
+
 .downloads{
     margin-bottom: 100px !important;
 }
@@ -492,7 +499,7 @@
     margin-top: 0px;
     margin-bottom: 15px;
     font-size: larger;
-    width: 300px;
+    width: 280px;
     display: block;
     
 }
@@ -612,4 +619,9 @@
 
 hr{
     margin: 0 auto;
+}
+
+.yt{
+    margin: 0 auto;
+    padding: 10px;
 }
