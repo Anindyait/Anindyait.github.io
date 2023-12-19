@@ -504,7 +504,7 @@
     
 }
 
-.downloads a:nth-child(1){
+.downloads a:nth-child(2){
     background-color: #aeaeff;
     color:#202053;
     transition: 0.3s;
@@ -513,21 +513,21 @@
 
 
 
-.downloads a:nth-child(1):hover{
+.downloads a:nth-child(2):hover{
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.15);
     transition: 0.3s;
     color: #393972;
     background-color:#9a9aff;
 }
 
-.downloads a:nth-child(2){
+.downloads a:nth-child(1){
     border: 1px solid #393972;
     color: #393972;
     transition: 0.3s;
 
 }
 
-.downloads a:nth-child(2):hover{
+.downloads a:nth-child(1):hover{
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.15);
     transition: 0.3s;
     border: 1px solid #393972;
@@ -622,6 +622,8 @@ hr{
 }
 
 .yt{
-    margin: 0 auto;
+    margin: 0 auto!important;
+    aspect-ratio: 1.777;
     padding: 10px;
+    border-radius: 25px;
 }
