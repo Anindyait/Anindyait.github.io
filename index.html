@@ -30,7 +30,6 @@
             var pageBottom = window.scrollY + window.screen.height;
             var tags = $(".appear");
             var elements = document.getElementsByClassName("appear");
-            console.log(window.scrollY);
             if(window.scrollY < 100)
             {
               icon.classList.remove("small");
@@ -116,7 +115,7 @@
                       <a class="nav-link" href="#about">About Me</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#project">My Projects</a>
+                      <a class="nav-link" href="#project">My Works</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="https://www.linkedin.com/in/anindya-biswas-334795220" target="_blank">LinkedIn</a>
@@ -137,6 +136,7 @@
                 <div class="block block-1">
        
                 <div class="greeting-container" id="home">
+                    <img src="/assets/images/bg.png" class="back-video">
                     <div class="header-spacing"></div>
                     <div class=" d-flex align-items-center justify-content-center">
                       <h1 class="greeting text-center fade-in" id="greet">Hi!</h1>
@@ -144,7 +144,7 @@
                     </div>
                     <div class="button-container">
                       <button class="custom-btn" id="aboutMe">About Me</button>
-                      <button class="custom-btn" id="myProjects">My Projects</button>
+                      <button class="custom-btn" id="myProjects">My Works</button>
                     </div>
                 </div>
                 </div>
@@ -189,8 +189,12 @@
                 <div class="block block-3">
                   <div class="project-container" id="project">
                     <div class="header-spacing"></div>
-                    <h1>My Projects</h1>
+                    <h1>My Works</h1>
                     <ul>
+                      <a href="/ICSTA" target="_blank"><li class="appear">
+                        <h2>Advancing Accessibility: ASL Visual Recognition Technology through EfficientNet </h2>
+                        <p>A research paper published on ICSTA 2023. It uses transfer learning on EfficientNet on a hand-curated dataset of ASL images.</p>
+                      </li></a>
                       <a href="https://github.com/priyanka-maz/sign-language-detection" target="_blank"><li class="appear">
                         <h2>American Sign Language Detection</h2>
                         <p>EchoSign was made as part of an IBM internship project. It uses transfer learning on MobileNet on a hand-curated dataset of ASL images. The website for this classification was developed in Flask and it uses TTS technology for ASL text to speech conversion.</p>
