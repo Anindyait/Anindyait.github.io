@@ -22,15 +22,40 @@
 	
 	<script src="https://kit.fontawesome.com/13deb536c6.js" crossorigin="anonymous"></script>
 
+	<script>
+        window.addEventListener("scroll", scroll);
+        function scroll() {
+            var pageBottom = window.scrollY + window.screen.height;
+            var tags = $(".appear");
+            var elements = document.getElementsByClassName("appear");
+            
+
+            for (var i = 0; i < tags.length; i++) {
+
+              var tag = tags[i];
+
+			  if (elements[i].offsetTop < pageBottom-200) 
+              {
+                $(tag).addClass("visible");
+              } 
+              else
+              {
+                $(tag).removeClass("visible");
+
+              }
+            }
+          }
+		</script>
 	</head>
 	
 	<body class="icsta">
 		<div class="font">
+		
 			
 			<div class="icsta-container">
 			
 				<div class="logos">
-					<img src="/ICSTA/cu.png" width="60" class="opacity-75">&nbsp;&nbsp; <img src="/ICSTA/icsta1.png" width="90" class="opacity-75">
+					<a href="https://agrienics.in/view_conference/1/" class=" text-decoration-none" target="_blank"><img src="/ICSTA/cu.png" width="60" class="opacity-75">&nbsp;&nbsp; <img src="/ICSTA/icsta1.png" width="90" class="opacity-75"></a> <span>*</span>
 
 				</div>
 				<h1 class="mt-4 mx-4 paper-title">Advancing Accessibility: ASL Visual Recognition Technology through EfficientNet <sup>120</sup></h1>
@@ -55,14 +80,13 @@
 						a model with 98.64% training accuracy and 95.01% unseen validation accuracy.</p>
 				</div>
 				<div class="downloads text-center mb-5">
-					<!--<a href="/ICSTA/Advancing_Accessibility__ASL_Visual_Recognition_Technology_through_EfficientNet.pdf" download><i class="fa-solid fa-arrow-down fa-"></i> &nbsp;Full Paper</a>-->
-					<a href="/ICSTA/poster.pdf" download><i class="fa-solid fa-arrow-down"></i> &nbsp;Download Poster</a>
-					<!--<a href="https://www.youtube.com/watch?v=b_E4G6wt8Go" download><i class="fa-brands fa-youtube fa-lg"></i> &nbsp;Video Demo</a>-->
+					<a href="/ICSTA/poster.pdf" download class="appear"><i class="fa-solid fa-arrow-down"></i> &nbsp;Download Poster</a>
+					<a href="/ICSTA/Advancing_Accessibility_ASL_Visual_Recognition_Technology_through_EfficientNet.pdf" download class="appear"><i class="fa-solid fa-arrow-down fa-"></i> &nbsp;Full Paper</a>
 
 				</div>
 
 				
-				<div class="text-center mb-5">
+				<div class="text-center mb-5 appear">
 					<h2 class="mt-5 ms-3 text-center opacity-75">Live Demo</h2>
 					<iframe class="yt" width="100%"  src="https://www.youtube.com/embed/b_E4G6wt8Go?si=sNQj4d5tYK5Ukisb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				</div>
@@ -72,12 +96,13 @@
 				<h2 class="mt-5 ms-3 text-center opacity-75 ">Connect with the authors</h2>
 
 				<div class="mt-4 mb-5 authors">
-					<a href="https://www.linkedin.com/in/priyanka-mazumdar-97b3811b4/" target="_blank">Priyanka Mazumdar &nbsp;<i class="fa-brands fa-linkedin fa-lg"></i></a>
-					<a href="https://www.linkedin.com/in/anindya-biswas-334795220/" target="_blank">Anindya Biswas &nbsp;<i class="fa-brands fa-linkedin fa-lg"></i></a>
-					<a href="https://www.linkedin.com/in/aritra-mandal-a2b12a2a6/" target="_blank">Aritra Mandal &nbsp;<i class="fa-brands fa-linkedin fa-lg"></i></a>
-					<a href="https://www.linkedin.com/in/anirban-naskar-156b3320a/" target="_blank">Anirban Naskar &nbsp;<i class="fa-brands fa-linkedin fa-lg"></i></a>
-					<a href="https://research.caluniv.ac.in/researcher/soumya-sen" target="_blank">Soumya Sen &nbsp;<i class="fa-solid fa-square-arrow-up-right"></i></a>
+					<a href="https://www.linkedin.com/in/priyanka-mazumdar-97b3811b4/" target="_blank" class="appear">Priyanka Mazumdar &nbsp;<i class="fa-brands fa-linkedin fa-lg"></i></a>
+					<a href="https://www.linkedin.com/in/anindya-biswas-334795220/" target="_blank" class="appear">Anindya Biswas &nbsp;<i class="fa-brands fa-linkedin fa-lg"></i></a>
+					<a href="https://www.linkedin.com/in/aritra-mandal-a2b12a2a6/" target="_blank" class="appear">Aritra Mandal &nbsp;<i class="fa-brands fa-linkedin fa-lg"></i></a>
+					<a href="https://www.linkedin.com/in/anirban-naskar-156b3320a/" target="_blank" class="appear">Anirban Naskar &nbsp;<i class="fa-brands fa-linkedin fa-lg"></i></a>
+					<a href="https://research.caluniv.ac.in/researcher/soumya-sen" target="_blank" class="appear">Soumya Sen &nbsp;<i class="fa-solid fa-square-arrow-up-right"></i></a>
 				</div>
+				<div class="note opacity-50 text-center mt-5 mb-2"><i>*This is not an official site for ICSTA or University of Calcutta</i></div>
 
 			</div>
 			

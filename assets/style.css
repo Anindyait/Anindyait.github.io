@@ -391,6 +391,10 @@
         list-style-type: none;
     }
 
+    .project-container .latest{
+        background-color: #ebeeff;
+    }
+
     .project-container li {
         list-style-type: none;
         list-style: none;
@@ -471,6 +475,8 @@
     margin: 0 auto;
     width:800px;
     max-width: 100%;
+    animation: fadeUp 1s;
+
 }
 
 .paper-title{
@@ -503,7 +509,7 @@
     
 }
 
-.downloads a:nth-child(2){
+.downloads a:nth-child(1){
     background-color: #aeaeff;
     color:#202053;
     transition: 0.3s;
@@ -512,21 +518,21 @@
 
 
 
-.downloads a:nth-child(2):hover{
+.downloads a:nth-child(1):hover{
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.15);
     transition: 0.3s;
     color: #393972;
     background-color:#9a9aff;
 }
 
-.downloads a:nth-child(1){
+.downloads a:nth-child(2){
     border: 1px solid #393972;
     color: #393972;
     transition: 0.3s;
 
 }
 
-.downloads a:nth-child(1):hover{
+.downloads a:nth-child(2):hover{
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.15);
     transition: 0.3s;
     border: 1px solid #393972;
@@ -536,6 +542,7 @@
 
 .authors{
     text-align: center!important;
+    
 }
 
 .authors .row{
@@ -550,6 +557,7 @@
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
+    
 }
 
 .authors a{
@@ -605,7 +613,7 @@
 
 .affiliation{
     line-height: 1.2;
-    font-size: 12px;
+    font-size: 15px;
     color:rgb(118, 118, 118);
 }
 
@@ -614,6 +622,13 @@
     padding: 18px;  
     background-color: #fafafa;
     border-radius: 0px 0px 30px 30px;  
+}
+
+.logos span{
+    font-size: 25px;
+    opacity: 50%;
+    position: absolute;
+    top:25px;
 }
 
 hr{
